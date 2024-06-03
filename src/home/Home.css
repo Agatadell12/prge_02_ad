@@ -1,0 +1,14 @@
+.home {
+  background-color: #fff;
+  position: relative;
+  width: 1917px;
+  height: 1039px;
+  display: flex;
+  justify-content: center;
+}
+.home_left {
+  background-color: blue;
+}
+.home_right {
+  background-color: chartreuse;
+}
