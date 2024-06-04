@@ -1,14 +1,121 @@
 .home {
-  background-color: #fff;
-  position: relative;
-  width: 1917px;
-  height: 1039px;
+  /* background-color: #fff; */
+  color: white;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 .home_left {
-  background-color: blue;
+  display: flex;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
 }
 .home_right {
-  background-color: chartreuse;
+  width: 50vw;
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  margin: 50px;
+}
+.mundury_1 {
+  position: absolute;
+  width: 1260px;
+  height: 991px;
+  left: 1729px;
+  top: 62px;
+}
+.home_left_title {
+  position: absolute;
+  width: 712px;
+  height: 100px;
+  left: 100px;
+  top: 632px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 116px;
+
+  color: #000000;
+}
+.home_left_subtitle {
+  position: absolute;
+  width: 820px;
+  height: 59px;
+  left: 60px;
+  top: 773px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 39px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.home_right_button {
+  position: absolute;
+  width: 300px;
+  height: 90px;
+  left: 109px;
+  top: 853px;
+  background-color: rgba(71, 174, 75, 1);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+}
+
+.home_right_button:hover {
+  background-color: #ffffff;
+  color: rgba(39, 211, 182, 0.5);
+  border-color: rgba(39, 211, 182, 0.5);
+}
+
+.home_top_about {
+  color: white;
+  background-color: rgba(71, 174, 75, 1);
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 44px;
+  font-size: 40px;
+  position: absolute;
+  top: 1450px;
+  right: 20px;
+}
+.home_top_about:hover {
+  background-color: #ffffff;
+  color: rgba(39, 211, 182, 0.5);
+  border-color: rgba(39, 211, 182, 0.5);
+}
+
+.home_top {
+  min-height: 15vh;
+  background-color: red;
+}
+
+.home_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+  }
+  .home_bottom {
+    flex-direction: column;
+  }
+  .plan_wat {
+    width: 85vw;
+    margin: 0 10vw;
+  }
 }
