@@ -1,0 +1,94 @@
+/* services.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.services_title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 80px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.services {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.services_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.services_options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 45%;
+  margin-left: 20px;
+}
+
+.services_obj {
+  width: 250px;
+  height: 250px;
+  background-color: #4caf50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.services_obj img {
+  width: 120px;
+  height: 120px;
+}
+
+.services_obj:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.services_obj:active {
+  background-color: #3e8e41;
+}
+
+.service_text {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.uniforms {
+  display: grid;
+  grid-template-columns: repeat(2, 5fr);
+  gap: 50px;
+  width: 45%;
+  margin-right: 20px;
+}
+
+.uniform_square {
+  width: 250px;
+  height: 250px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.uniform-img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+}

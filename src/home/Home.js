@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import mundury_1 from "./mundury_1.jpg";
 
@@ -21,6 +22,9 @@ function Home({ text }) {
       <div className="home_right">
         <img className="mundury_1" src={mundury_1} alt="logo" />
       </div>
+      <Link to="services">
+        <button className="home_right_button">START</button>
+      </Link>
     </div>
   );
 }
