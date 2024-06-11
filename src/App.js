@@ -2,6 +2,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./home/Home";
 import Services from "./services/Services";
+import Map from "./map/Map";
+import About from "./about/about";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +14,8 @@ const router = createBrowserRouter([
     path: "/services",
     element: <Services />,
   },
+  { path: "/services/map", element: <Map /> },
+  { path: "/about", element: <About /> },
 ]);
 function App() {
   // const imie = "world";

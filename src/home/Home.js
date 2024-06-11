@@ -22,6 +22,9 @@ function Home({ text }) {
       <div className="home_right">
         <img className="mundury_1" src={mundury_1} alt="logo" />
       </div>
+      <Link to="about">
+        <button className="home_top_about"> O PROJEKCIE </button>
+      </Link>
       <Link to="services">
         <button className="home_right_button">START</button>
       </Link>
