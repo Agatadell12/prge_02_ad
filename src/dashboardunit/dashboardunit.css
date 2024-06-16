@@ -1,0 +1,29 @@
+.dashboard-page {
+  width: 100%;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: flex-start; /* Wyrównanie tytułu do lewej */
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-around; /* Rozciągnięcie kart na całą szerokość */
+  margin-right: 16px; /* Dodanie marginesu z prawej strony */
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    justify-content: center;
+  }
+}

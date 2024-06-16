@@ -37,19 +37,15 @@ function Services() {
               alt="Baza danych"
               className="service-icon-img"
             />
-            <div className="service_text">Baza danych pracowników </div>
+            <div className="service_text">Baza danych pracowników</div>
           </Link>
-          <Link to="services" className="services_obj">
+          <Link to="/database" className="services_obj">
             <img
               src={servicesIcon}
               alt="Baza danych"
               className="service-icon-img"
             />
-            <div className="service_text">Baza danych jednostek</div>
-          </Link>
-          <Link to="map" className="services_obj">
-            <img src={mapIcon} alt="Mapa" className="service-icon-img" />
-            <div className="service_text">Mapa</div>
+            <div className="service_text">Baza danych jednostek wojskowych</div>
           </Link>
         </div>
         <div className="uniforms">
