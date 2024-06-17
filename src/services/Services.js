@@ -13,11 +13,11 @@ function Services() {
         <div className="services_options">
           <Link to="map" className="services_obj">
             <img src={mapIcon} alt="mapa" className="service-icon-img" />
-            <div className="service_text">Mapa pracowników</div>
+            <div className="service_text">Mapa jednostek</div>
           </Link>
           <Link to="map" className="services_obj">
             <img src={mapIcon} alt="Mapa" className="service-icon-img" />
-            <div className="service_text">Mapa jednostek</div>
+            <div className="service_text">Mapa pracowników </div>
           </Link>
           <Link to="map" className="services_obj">
             <img src={mapIcon} alt="Mapa" className="service-icon-img" />
