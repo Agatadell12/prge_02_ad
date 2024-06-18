@@ -102,7 +102,7 @@ const DatabaseSoldier = () => {
       <div className="header">
         <h1>BAZA ŻOŁNIERZY</h1>
         <div className="buttons">
-          <button className="button" onClick={() => navigate("/map")}>
+          <button className="button" onClick={() => navigate("/mapsolider")}>
             Mapa
           </button>
           <button className="button" onClick={() => navigate("/services")}>

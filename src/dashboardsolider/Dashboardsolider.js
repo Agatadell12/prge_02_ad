@@ -84,9 +84,11 @@ function Dashboardsolider() {
       <div className="dashboard-header">
         <h1>BAZA ŻOŁNIERZY</h1>
         <div className="dashboard-buttons">
-          <button onClick={() => navigate("/services/map")}>MAPA</button>
+          <button onClick={() => navigate("/services/mapsolider")}>MAPA</button>
           <button onClick={() => navigate("/services")}>DOSTĘPNE USŁUGI</button>
-          <button onClick={() => navigate("/database")}>BAZA DANYCH </button>
+          <button onClick={() => navigate("/databasesolider")}>
+            BAZA DANYCH{" "}
+          </button>
         </div>
       </div>
       <div className="dashboard-container">

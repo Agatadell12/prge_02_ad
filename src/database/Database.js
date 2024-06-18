@@ -21,7 +21,48 @@ const units = [
     hours: "8:00 - 16:00",
     sortingHours: "11:00 - 13:00",
   },
-  // Dodaj kolejne jednostki według potrzeby
+  {
+    name: "Jednostka Wojskowa 4",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
+  {
+    name: "Wojskowy Oddział Gospodarczy 2",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
+  {
+    name: "Oddział Czysty Mundur w Ślesinie",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
+  {
+    name: "Jednostka Wojskowa 6",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
+  {
+    name: "Jednostka Wojskowa 7",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
+  {
+    name: "Jednostka Wojskowa 8",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
+  {
+    name: "Jednostka Wojskowa 9",
+    address: "Adres 3",
+    hours: "8:00 - 16:00",
+    sortingHours: "11:00 - 13:00",
+  },
 ];
 
 const Database = () => {

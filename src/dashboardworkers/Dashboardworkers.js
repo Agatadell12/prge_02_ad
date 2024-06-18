@@ -84,7 +84,7 @@ function Dashboardworkers() {
       <div className="dashboard-header">
         <h1>BAZA PRACOWNIKÓW </h1>
         <div className="dashboard-buttons">
-          <button onClick={() => navigate("/services/map")}>MAPA</button>
+          <button onClick={() => navigate("/services/mapworkers")}>MAPA</button>
           <button onClick={() => navigate("/services")}>DOSTĘPNE USŁUGI</button>
           <button onClick={() => navigate("/databaseworkers")}>
             BAZA DANYCH{" "}

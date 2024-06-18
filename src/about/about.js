@@ -1,76 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./about.css";
-import authorPhoto from "./author.jpg"; // Zastąp ścieżką do zdjęcia autora
+import authorPhoto from "./author.jpg";
+import Map from "../mapsolider/Mapsolider";
+import { Link } from "react-router-dom";
 
 function About() {
+  const [showMap, setShowMap] = useState(false);
+
+  const handleShowMap = () => {
+    setShowMap(!showMap);
+  };
+
   return (
-    <div className="about-container">
-      <div className="section">
+    <div className="about">
+      <div className="about_project">
         <h1>O PROJEKCIE</h1>
         <p>
-          Shadow pink ghosts kill screen yellow disk video game maze console
-          power up dots Midway. Poison ivy grew through the fence they said was
-          impenetrable. Patricia loves the sound of nails strongly pressed
-          against the chalkboard.
-          <br />
-          <br />
-          She learned that water bottles are no longer just to hold liquid, but
-          they're also status symbols. She was disgusted he couldn't tell the
-          difference between lemonade and limeade. She had the gift of being
-          able to paint songs. He found his art never progressed when he
-          literally used his sweat and tears.
-          <br />
-          <br />
-          Don't put peanut butter on the dog's nose. Poison ivy grew through the
-          fence they said was impenetrable. Pac-Man Namco Toru Iwatani Pac-Man
-          Fever maze dots. Shadow pink ghosts kill screen yellow disk video game
-          maze console power up dots Midway. He was willing to find the depths
-          of the rabbit hole in order to be with her.
-          <br />
-          <br />
-          I think I will buy the red car, or I will lease the blue one. Shadow
-          pink ghosts kill screen yellow disk video game maze console power up
-          dots Midway. She had the gift of being able to paint songs. Pac-Man
-          Namco Toru Iwatani Pac-Man Fever maze dots. Pac-Man May blinks the
-          eyes of nails strongly pressed against the chalkboard. Patricia loves
-          the sound of nails strongly pressed against the chalkboard.
-          <br />
-          <br />
-          As she walked along the street and looked in the gutter, she realized
-          facemasks had become the new cigarette butts. He hated that he loved
-          what she hated about hate. She was disgusted he couldn't tell the
-          difference between lemonade and limeade. Patricia loves the sound of
-          nails strongly pressed against the chalkboard. The external scars tell
-          only part of the story.
+          Projekt został stworzony na potrzeby zajęć projektowych z przedmiotu
+          Programowanie geoportali na semestrze VIII. Projekt prezentuje
+          aplikację "mundurówka". Aplikacja ukazuje bazę danych oraz mapę
+          jednostek wydających sorty mundurowe, żołnierzy pobierających sorty
+          mundurowe oraz pracowników pracujących w tych jednostkach. W bazie
+          danych można poznać różne szczegóły dotyczące np. godzin w których
+          jednostka wydaje sorty, a także jakie sorty mundurowe nie zostały
+          wydane dla żołnierzy.
         </p>
+        <button onClick={handleShowMap} className="map-link">
+          {showMap ? "Ukryj Mapę" : "Pokaż Mapę"}
+        </button>
+        {showMap && (
+          <div className="map-container">
+            {" "}
+            <Map />{" "}
+          </div>
+        )}
       </div>
-      <div className="section section-author">
+      <div className="about_author">
         <h1>O AUTORZE</h1>
         <p>
-          Don't put peanut butter on the dog's nose. Poison ivy grew through the
-          fence they said was impenetrable. Pac-Man Namco Toru Iwatani Pac-Man
-          Fever maze dots. Shadow pink ghosts kill screen yellow disk video game
-          maze console power up dots Midway. He was willing to find the depths
-          of the rabbit hole in order to be with her.
-          <br />
-          <br />
-          I think I will buy the red car, or I will lease the blue one. Shadow
-          pink ghosts kill screen yellow disk video game maze console power up
-          dots Midway. She had the gift of being able to paint songs. Pac-Man
-          Namco Toru Iwatani Pac-Man Fever maze dots. Pac-Man May blinks the
-          eyes of nails strongly pressed against the chalkboard. Patricia loves
-          the sound of nails strongly pressed against the chalkboard.
-          <br />
-          <br />
-          As she walked along the street and looked in the gutter, she realized
-          facemasks had become the new cigarette butts. He hated that he loved
-          what she hated about hate. She was disgusted he couldn't tell the
-          difference between lemonade and limeade. Patricia loves the sound of
-          nails strongly pressed against the chalkboard. The external scars tell
-          only part of the story.
+          Autorem projektu jest plut. pchor. Agata DRZYGAŁO z grupy WIG20GG1S0.
+          Studentka IV roku geodezji i kartografii na specjalności
+          geoinformatyka.
         </p>
-        <img src={authorPhoto} alt="Author" className="author-photo" />
+        <img src={authorPhoto} alt="Autor" className="author-photo" />
       </div>
+      <Link to="/">
+        <button className="back">POWRÓT DO STRONY STARTOWEJ</button>
+      </Link>
     </div>
   );
 }

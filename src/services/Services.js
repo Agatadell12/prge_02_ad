@@ -47,6 +47,9 @@ function Services() {
             />
             <div className="service_text">Baza danych jednostek wojskowych</div>
           </Link>
+          <Link to="/">
+            <div className="back">POWRÓT DO STRONY STARTOWEJ</div>
+          </Link>
         </div>
         <div className="uniforms">
           <div className="uniform_square">

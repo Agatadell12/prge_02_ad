@@ -91,3 +91,18 @@ body {
   height: auto;
   border-radius: 50px;
 }
+.back {
+  color: white;
+  background-color: #4caf50;
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 44px;
+  font-size: 40px;
+  position: absolute;
+  top: 1350px;
+  right: 20px;
+}
+.back:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
