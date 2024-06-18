@@ -2,52 +2,119 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Databasesolider.css";
 
-const solider = [
+const soldiers = [
   {
-    military_degree: "kapral",
-    name: "Michał",
-    surname: "Jańczak",
-    jednostka_pobraniowa: "1 WOG",
-    czypobralsorty: "NIE",
-    czegoniepobral: "bielizna ziomowa, beret, buty zimowe, rękawiczki",
+    rank: "Szeregowy ",
+    firstName: "Jacek",
+    lastName: "Nieznany",
+    unit: "Jednostka Wojskowa 1",
+    sorted: true,
+    missingItems: "Brak",
   },
   {
-    military_degree: "kapral",
-    name: "Michał",
-    surname: "Jańczak",
-    jednostka_pobraniowa: "1 WOG",
-    czypobralsorty: "NIE",
-    czegoniepobral: "bielizna ziomowa, beret, buty zimowe, rękawiczki",
+    rank: "Sierżant",
+    firstName: "Joanna",
+    lastName: "Smiałek ",
+    unit: "2 Brygada Zmechanizowana",
+    sorted: false,
+    missingItems: "Kask, buty zimowe, bielizna zimowa",
   },
   {
-    military_degree: "kapral",
-    name: "Michał",
-    surname: "Jańczak",
-    jednostka_pobraniowa: "1 WOG",
-    czypobralsorty: "NIE",
-    czegoniepobral: "bielizna ziomowa, beret, buty zimowe, rękawiczki",
+    rank: "Kapitan",
+    firstName: "Michał",
+    lastName: "Jakubczyj",
+    unit: "5 Pułk Rozpoznawczy",
+    sorted: true,
+    missingItems: "Brak ",
   },
-  // Dodaj kolejne jednostki według potrzeby
+  {
+    rank: "Pułkownik",
+    firstName: "Andrzej",
+    lastName: "Piotrowski",
+    unit: "Jednostka Wojskowa 8",
+    sorted: true,
+    missingItems: "Brak",
+  },
+  {
+    rank: "Generał brygady",
+    firstName: "Paweł",
+    lastName: "Grabowski",
+    unit: "Jednostka Wojskowa 9",
+    sorted: true,
+    missingItems: "Brak",
+  },
+  {
+    rank: "Generał dywizji",
+    firstName: "Robert",
+    lastName: "Zieliński",
+    unit: "Jednostka Wojskowa 10",
+    sorted: false,
+    missingItems: "Kamizelka kuloodporna",
+  },
+  {
+    rank: "Podpułkownik",
+    firstName: "Weronika",
+    lastName: "Krawczyk",
+    unit: "Jednostka Wojskowa 7",
+    sorted: false,
+    missingItems: "Buty wojskowe",
+  },
+  {
+    rank: "Major",
+    firstName: "Małgorzata",
+    lastName: "Mazur",
+    unit: "Jednostka Wojskowa 6",
+    sorted: true,
+    missingItems: "Brak",
+  },
+  {
+    rank: "Starszy chorązy sztabowy",
+    firstName: "Paweł",
+    lastName: "Piotr",
+    unit: "Jednostka Wojskowa 3",
+    sorted: true,
+    missingItems: "Brak",
+  },
+  {
+    rank: "Porucznik",
+    firstName: "Katarzyna",
+    lastName: "Wójcik",
+    unit: "Jednostka Wojskowa 4",
+    sorted: true,
+    missingItems: "Brak",
+  },
 ];
 
-const Database = () => {
+const DatabaseSoldier = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
-  const filteredUnits = units.filter(
-    (unit) =>
-      unit.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      unit.address.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredSoldiers = soldiers.filter(
+    (soldier) =>
+      soldier.rank.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      soldier.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      soldier.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      soldier.unit.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div>
       <div className="header">
-        <h1>BAZA ŻOŁNIERZY POBIERAJĄCYCH SORTY MUNDUROWE</h1>
+        <h1>BAZA ŻOŁNIERZY</h1>
         <div className="buttons">
-          <button onClick={() => navigate("/services/map")}>Mapa</button>
-          <button onClick={() => navigate("/")}>START</button>
-          <button onClick={() => navigate("/dashboardunit")}> WIDOK </button>
+          <button className="button" onClick={() => navigate("/map")}>
+            Mapa
+          </button>
+          <button className="button" onClick={() => navigate("/services")}>
+            DOSTĘPNE USŁUGI
+          </button>
+          <button
+            className="button"
+            onClick={() => navigate("/dashboardsolider")}
+          >
+            {" "}
+            WIDOK{" "}
+          </button>
         </div>
       </div>
       <div className="search-bar">
@@ -61,19 +128,23 @@ const Database = () => {
       <table>
         <thead>
           <tr>
-            <th>Nazwa Jednostki</th>
-            <th>Adres</th>
-            <th>Godziny Pracy</th>
-            <th>Godziny Wydawania Sortów</th>
+            <th>Stopień</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Jednostka</th>
+            <th>Czy Pobrał Sorty</th>
+            <th>Brakujące Sorty</th>
           </tr>
         </thead>
         <tbody>
-          {filteredUnits.map((unit, index) => (
+          {filteredSoldiers.map((soldier, index) => (
             <tr key={index}>
-              <td>{unit.name}</td>
-              <td>{unit.address}</td>
-              <td>{unit.hours}</td>
-              <td>{unit.sortingHours}</td>
+              <td>{soldier.rank}</td>
+              <td>{soldier.firstName}</td>
+              <td>{soldier.lastName}</td>
+              <td>{soldier.unit}</td>
+              <td>{soldier.sorted ? "Tak" : "Nie"}</td>
+              <td>{soldier.missingItems}</td>
             </tr>
           ))}
         </tbody>
@@ -82,4 +153,4 @@ const Database = () => {
   );
 };
 
-export default Database;
+export default DatabaseSoldier;

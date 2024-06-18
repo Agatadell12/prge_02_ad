@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Map.css";
+import "./Mapsolider.css";
 import {
   LayersControl,
   MapContainer,

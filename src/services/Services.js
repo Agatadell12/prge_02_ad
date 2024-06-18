@@ -15,15 +15,15 @@ function Services() {
             <img src={mapIcon} alt="mapa" className="service-icon-img" />
             <div className="service_text">Mapa jednostek</div>
           </Link>
-          <Link to="map" className="services_obj">
+          <Link to="mapworkers" className="services_obj">
             <img src={mapIcon} alt="Mapa" className="service-icon-img" />
             <div className="service_text">Mapa pracowników </div>
           </Link>
-          <Link to="map" className="services_obj">
+          <Link to="mapsolider" className="services_obj">
             <img src={mapIcon} alt="Mapa" className="service-icon-img" />
             <div className="service_text">Mapa żołnierzy</div>
           </Link>
-          <Link to="services" className="services_obj">
+          <Link to="/databasesolider" className="services_obj">
             <img
               src={servicesIcon}
               alt="Baza danych"
@@ -31,7 +31,7 @@ function Services() {
             />
             <div className="service_text">Baza danych żołnierzy</div>
           </Link>
-          <Link to="services" className="services_obj">
+          <Link to="/databaseworkers" className="services_obj">
             <img
               src={servicesIcon}
               alt="Baza danych"

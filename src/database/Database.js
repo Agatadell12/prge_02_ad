@@ -37,11 +37,18 @@ const Database = () => {
   return (
     <div>
       <div className="header">
-        <h1>BAZA JEDNOSTEK WOJSKOWYCH</h1>
+        <h1>BAZA ODDZIAŁÓW</h1>
         <div className="buttons">
-          <button onClick={() => navigate("/services/map")}>Mapa</button>
-          <button onClick={() => navigate("/")}>START</button>
-          <button onClick={() => navigate("/dashboardunit")}> WIDOK </button>
+          <button className="button" onClick={() => navigate("/map")}>
+            MAPA
+          </button>
+          <button className="button" onClick={() => navigate("/services")}>
+            DOSTĘPNE USŁUGI
+          </button>
+          <button className="button" onClick={() => navigate("/dashboardunit")}>
+            {" "}
+            WIDOK{" "}
+          </button>
         </div>
       </div>
       <div className="search-bar">
