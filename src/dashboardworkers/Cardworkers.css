@@ -1,0 +1,22 @@
+.card {
+  flex: 1 1 calc(25% - 32px); /* Każda karta zajmuje 25% szerokości minus margines */
+  margin: 16px;
+  max-width: 300px; /* Opcjonalnie: ustal maksymalną szerokość kart */
+}
+
+.card img {
+  width: 100%; /* Sprawia, że obrazek zajmuje całą szerokość karty */
+  height: auto; /* Automatyczna wysokość obrazka */
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 32px); /* Na mniejszych ekranach karty zajmują 50% szerokości */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* Na najmniejszych ekranach karty zajmują całą szerokość */
+  }
+}
