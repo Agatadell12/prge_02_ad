@@ -26,7 +26,7 @@ function About() {
           wydane dla żołnierzy.
         </p>
         <button onClick={handleShowMap} className="map-link">
-          {showMap ? "Ukryj Mapę" : "Pokaż Mapę"}
+          {showMap ? "UKRYJ MAPĘ" : "POKAŻ MAPĘ"}
         </button>
         {showMap && (
           <div className="map-container">

@@ -26,8 +26,8 @@ p {
   display: block;
   margin: 20px;
   width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  height: 250px;
+  border-radius: 10%;
 }
 
 .about_author {
@@ -38,22 +38,29 @@ p {
 }
 
 .map-link {
+  background-color: #4caf50;
+  width: 300px;
+  height: 90px;
   display: block;
   margin: 20px auto;
-  font-size: 18px; /* Zwiększona czcionka dla linku */
-  color: #007bff;
+  font-size: 25px;
+  font-family: "Inter";
+  font-style: normal;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
 .map-link:hover {
   text-decoration: underline;
+  background-color: #45a049;
+  transform: scale(1.05);
 }
 
 .map-container {
-  margin: 20px auto; /* Wyśrodkowanie mapy */
-  width: 500px; /* Ustawienie szerokości kwadratu */
-  height: 500px; /* Ustawienie wysokości kwadratu */
+  margin: 20px auto;
+  width: 2000px;
+  height: 500px;
   border: 1px solid #ccc;
   overflow: hidden;
 }
