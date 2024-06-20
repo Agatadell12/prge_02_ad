@@ -107,7 +107,10 @@ const Database = () => {
       <div className="header">
         <h1>BAZA PRACOWNIKÓW</h1>
         <div className="buttons">
-          <button className="button" onClick={() => navigate("/mapworkers")}>
+          <button
+            className="button"
+            onClick={() => navigate("/services/mapworkers")}
+          >
             MAPA
           </button>
           <button className="button" onClick={() => navigate("/services")}>
